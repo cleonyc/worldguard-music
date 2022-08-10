@@ -1,0 +1,11 @@
+version: 0.1.0
+
+regions:
+  example:
+    onEnter:
+      # look at https://mcmodels.net/how-to-tutorials/resource-pack-tutorials/how-to-add-custom-sounds-to-resource-pack/ for info on resource pack set up
+      # the value here is yoursound:example.sound.name_1 as described in tutorial
+      play: "wgmusic:wgmusic.sound.sample4"
+      send: "&ccolored message woo playing music"
+    onLeave:
+      play: "wgmusic:wgmusic.sound.sample4"

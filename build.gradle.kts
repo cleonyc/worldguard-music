@@ -4,13 +4,14 @@ import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 plugins {
     `java-library`
     kotlin("jvm") version "1.7.10"
+    kotlin("plugin.serialization") version "1.7.10"
     id("io.papermc.paperweight.userdev") version "1.3.7"
     id("xyz.jpenilla.run-paper") version "1.0.6" // Adds runServer and runMojangMappedServer tasks for testing
     id("net.minecrell.plugin-yml.bukkit") version "0.5.2" // Generates plugin.yml
 }
 
 group = "nyc.cleo"
-version = "1.0-SNAPSHOT"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -19,6 +20,7 @@ repositories {
 dependencies {
     paperDevBundle("1.19-R0.1-SNAPSHOT")
     implementation("net.axay:kspigot:1.19.0")
+    implementation("net.raidstone:WorldGuardEvents:1.18.1")
 }
 
 tasks {
@@ -52,7 +54,9 @@ tasks {
 
 bukkit {
     load = BukkitPluginDescription.PluginLoadOrder.STARTUP
-    main = "nyc.cleo.changeme.ChangeMe"
+    main = "nyc.cleo.wgmusic.WorldGuardMusic"
     apiVersion = "1.18"
     authors = listOf("cleonyc")
+    libraries = listOf("net.axay:kspigot:1.19.0")
+    depend = listOf("WorldGuardEvents")
 }

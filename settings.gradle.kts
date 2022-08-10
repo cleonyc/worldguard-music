@@ -14,4 +14,4 @@ pluginManagement {
         maven("https://papermc.io/repo/repository/maven-public/")
     }
 }
-rootProject.name = "changeme"
+rootProject.name = "wgmusic"
