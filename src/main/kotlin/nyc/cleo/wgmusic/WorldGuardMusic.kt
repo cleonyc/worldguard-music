@@ -31,6 +31,9 @@ class WorldGuardMusic : KSpigot() {
         this.saveDefaultConfig()
         config = Config(this.getConfig())
         pluginManager.registerEvents(WorldGuardMusicEventHandlers(), this)
+        for (p in this.server.onlinePlayers) {
+            p.stopAllSounds()
+        }
     }
     override fun shutdown() { }
     companion object {
