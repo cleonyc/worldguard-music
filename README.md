@@ -1,5 +1,5 @@
 # SatMusic
-A utility to play music in resource packs based on worldgaurd events.
+A utility to play music in resource packs based on worldguard events.
 
 # Usage
 Use a resource pack with custom sounds added.
